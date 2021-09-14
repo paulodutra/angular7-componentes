@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "iniciando-com-angular7": {
+    "angular7-componentes": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/iniciando-com-angular7",
+            "outputPath": "dist/angular7-componentes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -58,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "iniciando-com-angular7:build"
+            "browserTarget": "angular7-componentes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "iniciando-com-angular7:build:production"
+              "browserTarget": "angular7-componentes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "iniciando-com-angular7:build"
+            "browserTarget": "angular7-componentes:build"
           }
         },
         "test": {
@@ -103,7 +108,7 @@
         }
       }
     },
-    "iniciando-com-angular7-e2e": {
+    "angular7-componentes-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "iniciando-com-angular7:serve"
+            "devServerTarget": "angular7-componentes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "iniciando-com-angular7:serve:production"
+              "devServerTarget": "angular7-componentes:serve:production"
             }
           }
         },
@@ -132,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "iniciando-com-angular7"
+  "defaultProject": "angular7-componentes"
 }
